@@ -34,7 +34,7 @@ export function FooterContainer(){
                 </Footer.Column>
             </Footer.Row>
             <Footer.Break />
-            <Footer.Text>Denvato Netflix Nigeria</Footer.Text>
+            <Footer.Text>Dazzling Netflix Nigeria</Footer.Text>
         </Footer>
     )
 }

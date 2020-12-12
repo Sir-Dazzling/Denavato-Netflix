@@ -47,7 +47,7 @@ export const Break = styled.p`
 `;
 
 export const Text = styled.p`
-    font-size: 13px;
+    font-size: 1em;
     color: #757575;
     margin-bottom: 40px;
 `;
