@@ -9,6 +9,7 @@ import * as ROUTES from '../constants/routes';
 export default function Signin(){
     const history = useHistory();
     const {firebase} = useContext(FirebaseContext);
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -17,13 +18,12 @@ export default function Signin(){
     const isInvalid = password === "" || email === "";
 
     // Sign in action handler
-    const handleSignIn = async(event) => {
+    const handleSignIn = (event) => {
         event.preventDefault();
-        await firebase
+        firebase
             .auth()
             .signInWithEmailAndPassword(email, password)
             .then(() => {
-                // push to the browse page
                 history.push(ROUTES.BROWSE);
             })
             .catch((error) => {
@@ -58,12 +58,12 @@ export default function Signin(){
                     </Form.Text>
 
                     <Form.TextSmall>
-                        This page is protected byt Google reCAPTCHA to ensure you are not a bot. Learn more.
+                        This page is protected byt Google reCAPTCHA to ensure you are not a bot.  
+                        <Form.TextHighlighted to="/learn_more"> Learn more.</Form.TextHighlighted>
                     </Form.TextSmall>
                 </Form>
             </HeaderContainer>
-            <FooterContainer>
-            </FooterContainer>
+            <FooterContainer />
         </>
     );
 }

@@ -50,6 +50,15 @@ export const TextSmall = styled.p`
     color: #8c8c8c;
 `;
 
+export const TextHighlighted = styled(ReactRouterLink)`
+    color: #0071eb;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+`;
+
 export const Link = styled(ReactRouterLink)`
     color: white;
     text-decoration: none;

@@ -1,4 +1,4 @@
-import {Container, Base, Error, Title, Text, TextSmall, Link, Input, Submit} from './styles/form';
+import {Container, Base, Error, Title, Text, TextHighlighted, TextSmall, Link, Input, Submit} from './styles/form';
 
 export default function Form({children, ...restProps}){
     return <Container {...restProps}>{children}</Container>
@@ -22,6 +22,10 @@ Form.Text = function FormText({children, ...restProps}){
 
 Form.TextSmall = function FormTextSmall({children, ...restProps}){
     return <TextSmall {...restProps}>{children}</TextSmall>
+};
+
+Form.TextHighlighted = function FormTextHighlighted({children, ...restProps}){
+    return <TextHighlighted {...restProps}>{children}</TextHighlighted>
 };
 
 Form.Link = function FormLink({children, ...restProps}){
