@@ -1,13 +1,12 @@
+import { BrowseContainer } from '../containers/browse';
 import {useContent} from '../hooks';
+import SelectionFilter from '../utilities/selection-filter';
 
 export default function Browse(){
     // fetching series and films
     const {series} = useContent("series");
     const {films} = useContent("films");
-    console.log("Series are ", series); 
-    console.log("Films are ", films); 
+    const slides = SelectionFilter({series, films});
 
-    return (
-        <p>Hello this is the Browse page!</p>
-    );
+    return <BrowseContainer slides={slides} />
 }
